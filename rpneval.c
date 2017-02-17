@@ -22,7 +22,7 @@ char *pc;
 pc = expr;
 	while(*pc != '\0')
 	{
-		if(*(pc -1) == ' ' || *(pc -1) == '\t' || firstletter)
+		if(firstletter || *(pc -1) == ' ' || *(pc -1) == '\t')
 		{
 			firstletter = 0;
 			if(*pc >= '0' && *pc <= '9') //it's a number... push it on the stack
